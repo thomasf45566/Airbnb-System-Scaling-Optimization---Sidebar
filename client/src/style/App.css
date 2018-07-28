@@ -1,0 +1,23 @@
+.sidebar{
+  max-width: 480px;
+  max-height: 800px;
+  /* display:flex;
+  flex-direction: column; */
+}
+.headertest {
+  color:red;
+  font-size: 100px;
+};
+.image-gallery{
+  width: 315 !important;
+  height: 500 !important;
+  /* background-color:'black'; */
+};
+.lowersection{
+  display:block;
+  /* flex-direction: column; */
+  font-size: 20px;
+  padding: 20px 0px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  justify-content: center
+}
