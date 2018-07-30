@@ -13,21 +13,88 @@ class App extends React.Component{
     this.state = {
       currentexperience: 'wolfencounter',
       imgs: [],
-      currentImg: {}
+      currentImg: {},
+      showVideo: {},
+
     }
   };
 
   componentDidMount(){
     this.fetchimgs()
+  //   this.setState(prevState => ({
+  //     imgs: {
+  //         ...prevState.jasper,
+  //         name: 'something'
+  //     }
+  // }))
   };
 
   fetchimgs(){
     axios.get(`/sidebar/${this.state.currentexperience}`)
       .then((data) => {
-        console.log('got data: ', data)
-        this.setState( {imgs: data.data, currentImg: data.data[0]} )
+        console.log('got data: ', data.data)
+        let arr = data.data;
+        console.log(arr[0]);
+        arr[0]['renderItem'] = this._renderVideo.bind(this);
+        this.setState( {imgs: arr, currentImg: arr[0]} )
       })
       .catch((err) => {console.error(err)})
+  };
+
+  _toggleShowVideo(url) {
+    this.state.showVideo[url] = !Boolean(this.state.showVideo[url]);
+    this.setState({
+      showVideo: this.state.showVideo
+    });
+
+    // if (this.state.showVideo[url]) {
+    //   if (this.state.showPlayButton) {
+    //     this.setState({showGalleryPlayButton: false});
+    //   }
+
+    //   if (this.state.showFullscreenButton) {
+    //     this.setState({showGalleryFullscreenButton: false});
+    //   }
+    // }
+  }
+
+  _renderVideo(item) {
+    return (
+      <div className='image-gallery-image'>
+        {
+          this.state.showVideo[item.embedUrl] ?
+            <div className='video-wrapper'>
+                <a
+                  className='close-video'
+                  onClick={this._toggleShowVideo.bind(this, item.embedUrl)}
+                >
+                </a>
+                <iframe
+                  width='480'
+                  height='640'
+                  src={item.embedUrl}
+                  frameBorder='0'
+                  // allowFullScreen
+                >
+                </iframe>
+            </div>
+          :
+            <a onClick={this._toggleShowVideo.bind(this, item.embedUrl)}>
+              <div className='play-button'></div>
+              <img src={item.original}/>
+              {/* {
+                item.description &&
+                  <span
+                    className='image-gallery-description'
+                    style={{right: '0', left: 'initial'}}
+                  >
+                    {item.description}
+                  </span>
+              } */}
+            </a>
+        }
+      </div>
+    );
   };
 
   render(){
@@ -40,18 +107,14 @@ class App extends React.Component{
         <div>
           <ImageGallery 
               items ={this.state.imgs}
-              showNav={true}
+              showNav = {true}
               showThumbnails={false}
               slideInterval={2000}
-              autoPlay={true}
+              autoPlay={false}
           />
         </div>
         <div className={style.lowersection}>
           <LowerSection />
-        </div>
-        <hr></hr>
-        <div>
-          <ShareSection />
         </div>
       </div>
     )
