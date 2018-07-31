@@ -6,22 +6,23 @@
   /* padding: 20px 0px; */
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
   /* justify-content: center */
+  box-sizing: content-box;
 }
 
 .reviewsection{
   /* float: left; */
   padding: 20px 0px;
   /* justify-content: center; */
-  /* display: inline-block; */
+  display: inline-block;
   border-bottom: 1px solid rgb(179, 179, 179);
-  box-sizing: border-box;
+  width: 480px;
 }
 .reviewdetails{
   float: left;
   color: #008489 !important;
   font-size: 14px;
   justify-content: center;
-  /* line-height: 22px; */
+  line-height: 22px;
 }
 .price{
   /* padding-top: 20px; */
@@ -31,18 +32,23 @@
 }
 
 .buttonContainer{
-  /* display:flex; */
+  /* display:inline-block; */
   float: right;
+  /* top:200px; */
+  margin-top: -40px;
+  /* margin-left: 340.2px;
+  margin-right: 0px;
+  margin-bottom: 0px; */
 }
 .seeDatesButton{
   line-height: 22px;
   /* display: inline-block; */
-  /* overflow: auto; */
+  overflow: auto;
 
   min-width: 90.5px;
   width: auto;
   height: auto;
-  padding: 12px 24px;
+  padding: 15px 27px;
   border-radius:4.2px;
 
   background-color: rgb(255, 90, 95);

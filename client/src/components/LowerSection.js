@@ -28,9 +28,9 @@ class LowerSection extends React.Component{
               ★★★★★ {this.state.reviewcount} reviews
             </span>
           </p>
-          <div className={style.buttonContainer}>
-            <button className={style.seeDatesButton}>See dates</button>
-          </div>
+            <div className={style.buttonContainer}>
+              <button className={style.seeDatesButton}>See dates</button>
+            </div>
         </div>
         {/* <hr></hr> */}
         <div>

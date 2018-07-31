@@ -60,7 +60,7 @@ class App extends React.Component{
 
   _renderVideo(item) {
     return (
-      <div className='image-gallery-image'>
+      <div className='image-gallery-image' style={{zIndex:2}}>
         {
           this.state.showVideo[item.embedUrl] ?
             <div className='video-wrapper'>
@@ -74,6 +74,7 @@ class App extends React.Component{
                   height='640'
                   src={item.embedUrl}
                   frameBorder='0'
+                  loop='1'
                   // allowFullScreen
                 >
                 </iframe>
@@ -107,10 +108,11 @@ class App extends React.Component{
         <div>
           <ImageGallery 
               items ={this.state.imgs}
-              showNav = {true}
+              showNav = {false}
               showThumbnails={false}
-              slideInterval={2000}
+              slideInterval={2800}
               autoPlay={false}
+              showFullscreenButton={false}
           />
         </div>
         <div className={style.lowersection}>
