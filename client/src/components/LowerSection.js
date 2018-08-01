@@ -10,13 +10,13 @@ class LowerSection extends React.Component{
       price: 0,
       reviewcount: 0
     }
-  }
+  };
   componentDidMount(){
     this.fetchReviews()
-  }
+  };
   fetchReviews(){
     // axios.get()
-  }
+  };
   render(){
     return(
       <div className={style.lowersection}>
@@ -39,6 +39,6 @@ class LowerSection extends React.Component{
       </div>
     )
   }
-}
+};
 
 export default LowerSection;

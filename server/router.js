@@ -3,6 +3,6 @@ const controller = require('./controller');
 
 router.route('/:experience')
   .get(controller.get)
-  // .post(controller.post)
+  .post(controller.post)
 
 module.exports = router;

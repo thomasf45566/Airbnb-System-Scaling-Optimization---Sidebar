@@ -32,9 +32,9 @@ class App extends React.Component{
   fetchimgs(){
     axios.get(`/sidebar/${this.state.currentexperience}`)
       .then((data) => {
-        console.log('got data: ', data.data)
+        // console.log('got data: ', data.data)
         let arr = data.data;
-        console.log(arr[0]);
+        // console.log(arr[0]);
         arr[0]['renderItem'] = this._renderVideo.bind(this);
         this.setState( {imgs: arr, currentImg: arr[0]} )
       })
@@ -113,6 +113,7 @@ class App extends React.Component{
               slideInterval={2800}
               autoPlay={false}
               showFullscreenButton={false}
+              
           />
         </div>
         <div className={style.lowersection}>

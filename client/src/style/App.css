@@ -3,6 +3,9 @@
   max-height: auto;
   /* display:flex; */
   /* flex-direction: column; */
+  position: relative;
+  float:right;
+  margin-right: 200px;
 }
 
 /* .image-gallery{

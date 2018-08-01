@@ -19,3 +19,5 @@ app.use(express.static(path.join(__dirname, '../client/dist/')));
 app.use('/sidebar', router);
 
 app.listen(port, () => console.log(`connected to port ${port}`));
+
+module.exports = app;
