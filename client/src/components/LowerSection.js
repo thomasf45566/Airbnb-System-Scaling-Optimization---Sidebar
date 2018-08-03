@@ -7,8 +7,8 @@ class LowerSection extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      price: 0,
-      reviewcount: 0
+      price: 175,
+      reviewcount: 100,
     }
   };
   componentDidMount(){
