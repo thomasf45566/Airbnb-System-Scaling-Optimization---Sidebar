@@ -19,4 +19,4 @@ const SidebarImgModel = ottoman.model('SidebarImg', {
   embedurl : "string"
 })
 
-module.exports = SidebarImgModel;
+module.exports = { SidebarImgModel };

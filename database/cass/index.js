@@ -38,7 +38,7 @@ MyModel.syncDB(function(err, result) {
     console.log('cassandra connected');
 });
 
-module.exports = MyModel;
+module.exports = { MyModel };
 
 // var models = require('express-cassandra');
 

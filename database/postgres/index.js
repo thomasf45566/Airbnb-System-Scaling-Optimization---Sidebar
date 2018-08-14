@@ -21,4 +21,4 @@ sequelize
   
   SidebarImg.sync();
 
-  module.exports = SidebarImg;
+  module.exports = { SidebarImg };
