@@ -11,7 +11,7 @@ class App extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      currentexperience: 'wolfencounter',
+      currentexperience: 'wolfencounter999999',
       imgs: [],
       currentImg: {},
       showVideo: {},
@@ -62,17 +62,17 @@ class App extends React.Component{
     return (
       <div className='image-gallery-image' style={{zIndex:2}}>
         {
-          this.state.showVideo[item.embedUrl] ?
+          this.state.showVideo[item.embedurl] ?
             <div className='video-wrapper'>
                 <a
                   className='close-video'
-                  onClick={this._toggleShowVideo.bind(this, item.embedUrl)}
+                  onClick={this._toggleShowVideo.bind(this, item.embedurl)}
                 >
                 </a>
                 <iframe
                   width='480'
                   height='640'
-                  src={item.embedUrl}
+                  src={item.embedurl}
                   frameBorder='0'
                   loop='1'
                   // allowFullScreen
@@ -80,7 +80,7 @@ class App extends React.Component{
                 </iframe>
             </div>
           :
-            <a onClick={this._toggleShowVideo.bind(this, item.embedUrl)}>
+            <a onClick={this._toggleShowVideo.bind(this, item.embedurl)}>
               <div className='play-button'></div>
               <img src={item.original}/>
               {/* {
