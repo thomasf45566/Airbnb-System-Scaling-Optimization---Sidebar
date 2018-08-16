@@ -4,8 +4,6 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const router = require('./router');
-const connection = require('../database/index');
-
 const app = express();
 
 const port = 3000;
