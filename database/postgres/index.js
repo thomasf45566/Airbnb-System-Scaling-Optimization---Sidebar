@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('sidebarimg', 'mac', '', {
+const sequelize = new Sequelize('sidebarimg', 'postgres', 'example', {
   host: 'db',
   dialect: 'postgres',
 });
