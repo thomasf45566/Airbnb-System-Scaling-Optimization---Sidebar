@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server",
     "build": "webpack -w",
+    "csv": "node database/seed/createCSV.js",
     "setup": "node ./database/seed/seedData.js",
     "lint": "eslint src",
     "test": "jest",
