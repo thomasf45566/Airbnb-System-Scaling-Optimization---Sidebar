@@ -1,10 +1,14 @@
-# Sidebar
-Sidebar Component for Airbnb Experiences Item Page
+# Airbnb System Scaling Optimization-Sidebar
+System Scaling and Optimization for Airbnb Experiences Item Page
 
-To load this app:
+To Compile React Code
+- npm run build
 
-make sure mongod/mongo is running
+To Create CSV file for seeding:
+- npm run csv
 
-npm install --save
-npm run build
-npm run setup
+To Seed Data from CSV to Database: (in PostgreSQL shell)
+\COPY sidebarimgs(experience, original, embedurl) FROM PATH_TO_Data.csv WITH CSV HEADER;
+
+To Start the Server:
+- npm start
