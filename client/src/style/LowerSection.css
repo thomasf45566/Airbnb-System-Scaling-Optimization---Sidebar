@@ -1,18 +1,10 @@
 .lowersection{
-  /* display:flex; */
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
-  /* font-size: 20px; */
-  /* padding: 20px 0px; */
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-  /* justify-content: center */
   box-sizing: content-box;
 }
 
 .reviewsection{
-  /* float: left; */
   padding: 20px 0px;
-  /* justify-content: center; */
   display: inline-block;
   border-bottom: 1px solid rgb(179, 179, 179);
   width: 480px;
@@ -25,24 +17,17 @@
   line-height: 22px;
 }
 .price{
-  /* padding-top: 20px; */
   font-size:16px;
   color:#484848;
   line-height: 22px;
 }
 
 .buttonContainer{
-  /* display:inline-block; */
   float: right;
-  /* top:200px; */
   margin-top: -40px;
-  /* margin-left: 340.2px;
-  margin-right: 0px;
-  margin-bottom: 0px; */
 }
 .seeDatesButton{
   line-height: 22px;
-  /* display: inline-block; */
   overflow: auto;
 
   min-width: 90.5px;
@@ -56,7 +41,6 @@
   font-size: 18px;
   font-weight:240 !important;
   text-align:center;
-  /* letter-spacing: normal !important; */
 
   justify-content: center;
 };

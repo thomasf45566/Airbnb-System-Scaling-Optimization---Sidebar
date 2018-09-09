@@ -1,7 +1,6 @@
 import React from 'react';
 import ShareSection from './ShareSection';
 import style from '../style/LowerSection.css';
-import axios from 'axios';
 
 class LowerSection extends React.Component{
   constructor(props){
@@ -10,12 +9,6 @@ class LowerSection extends React.Component{
       price: 175,
       reviewcount: 100,
     }
-  };
-  componentDidMount(){
-    this.fetchReviews()
-  };
-  fetchReviews(){
-    // axios.get()
   };
   render(){
     return(
@@ -32,7 +25,6 @@ class LowerSection extends React.Component{
               <button className={style.seeDatesButton}>See dates</button>
             </div>
         </div>
-        {/* <hr></hr> */}
         <div>
           <ShareSection />
         </div>

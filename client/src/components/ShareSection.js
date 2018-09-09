@@ -16,7 +16,6 @@ class ShareSection extends React.Component{
         </a>
         <a className={style.mailbutton} target="_blank" title="mail this" href="http://www.gmail.com">
           <img style={{width:25, height:28}} alt="mail this" 
-            // src="https://cdn1.iconfinder.com/data/icons/e-mail-2/512/YPS__email_mail_letter_envelope_postal-512.png" 
             src="https://freeiconshop.com/wp-content/uploads/edd/mail-var-solid.png" 
           />
         </a>

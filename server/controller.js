@@ -2,12 +2,6 @@ const { SidebarImg } = require('../database/postgres');
 
 const controller = {
   get: (req, res) => {
-    // SidebarImg.find({
-    //   experience: req.params.experience
-    // }, (err, data) => {
-    //   if(err){res.status(404).send(err)}
-    //   else{res.status(200).send(data)}
-    // });
     SidebarImg.findAll({
       where: { experience: req.params.experience }
     })
@@ -15,10 +9,6 @@ const controller = {
     .catch(err => res.status(404).send(err));
   },
   post: (req, res) => {
-    // new SidebarImg(res.body).save(err => {
-    //   if (err) res.status(404).send(err);
-    //   res.status(201).send('posted');
-    // });
     SidebarImg.create(req.body)
     .then(result => res.status(201).send(result))
     .catch(err => res.status(404).send(err));

@@ -4,9 +4,6 @@ const sequelize = new Sequelize('sidebarimg', 'postgres', 'example', {
   host: 'db',
   dialect: 'postgres',
 });
-// const sequelize = new Sequelize('sidebarimg', 'mac', '', {
-//   dialect: 'postgres',
-// });
 
 sequelize
   .authenticate()

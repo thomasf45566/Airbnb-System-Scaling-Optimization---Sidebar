@@ -1,21 +1,5 @@
 .sidebar{
   max-width: 480px;
   max-height: auto;
-  /* display:flex; */
-  /* flex-direction: column; */
   position: relative;
-  /* float:right; */
-  /* margin-right: 200px; */
 }
-
-/* .image-gallery{
-  width: 315 !important;
-  height: 500 !important;
-  background-color:'black';
-}; */
-/* .lowersection{
-  display:flex;
-  font-size: 20px;
-  padding: 20px 0px;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-} */

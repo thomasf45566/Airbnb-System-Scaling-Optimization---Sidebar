@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import LowerSection from './LowerSection';
-import ShareSection from './ShareSection';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 import style from '../style/App.css';
@@ -21,20 +20,12 @@ class App extends React.Component{
 
   componentDidMount(){
     this.fetchimgs()
-  //   this.setState(prevState => ({
-  //     imgs: {
-  //         ...prevState.jasper,
-  //         name: 'something'
-  //     }
-  // }))
   };
 
   fetchimgs(){
     axios.get(`/sidebar/experience/${this.state.currentexperience}`)
       .then((data) => {
-        // console.log('got data: ', data.data)
         let arr = data.data;
-        // console.log(arr[0]);
         arr[0]['renderItem'] = this._renderVideo.bind(this);
         this.setState( {imgs: arr, currentImg: arr[0]} )
       })
@@ -46,16 +37,6 @@ class App extends React.Component{
     this.setState({
       showVideo: this.state.showVideo
     });
-
-    // if (this.state.showVideo[url]) {
-    //   if (this.state.showPlayButton) {
-    //     this.setState({showGalleryPlayButton: false});
-    //   }
-
-    //   if (this.state.showFullscreenButton) {
-    //     this.setState({showGalleryFullscreenButton: false});
-    //   }
-    // }
   }
 
   _renderVideo(item) {
@@ -75,7 +56,6 @@ class App extends React.Component{
                   src={item.embedurl}
                   frameBorder='0'
                   loop='1'
-                  // allowFullScreen
                 >
                 </iframe>
             </div>
@@ -83,15 +63,6 @@ class App extends React.Component{
             <a onClick={this._toggleShowVideo.bind(this, item.embedurl)}>
               <div className='play-button'></div>
               <img src={item.original}/>
-              {/* {
-                item.description &&
-                  <span
-                    className='image-gallery-description'
-                    style={{right: '0', left: 'initial'}}
-                  >
-                    {item.description}
-                  </span>
-              } */}
             </a>
         }
       </div>
@@ -99,12 +70,8 @@ class App extends React.Component{
   };
 
   render(){
-    // console.log('style: ', style)
     return (
       <div className={style.sidebar}>
-        {/* <h1 
-          className={style.headertest}
-        >{this.state.currentexperience}</h1> */}
         <div>
           <ImageGallery 
               items ={this.state.imgs}
@@ -113,7 +80,6 @@ class App extends React.Component{
               slideInterval={2800}
               autoPlay={false}
               showFullscreenButton={false}
-              
           />
         </div>
         <div className={style.lowersection}>
